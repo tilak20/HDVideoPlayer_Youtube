@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <include
+        android:id="@+id/layout"
+        layout="@layout/include"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Scrollview"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/LL1"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Recent Played"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@id/recentPlayedRV"
+                app:layout_constraintEnd_toStartOf="@+id/imageFilterView3"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/more"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recentPlayedRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageFilterView3"
+                tools:listitem="@layout/recentplay_item" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageGame"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/game"
+                app:layout_constraintBottom_toTopOf="@id/youtubeDownload"
+                app:layout_constraintEnd_toStartOf="@id/imageDownload"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recentPlayedRV" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imggameicon"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/gameicon"
+                app:layout_constraintBottom_toTopOf="@id/txtgame"
+                app:layout_constraintEnd_toEndOf="@+id/imageGame"
+                app:layout_constraintStart_toStartOf="@id/imageGame"
+                app:layout_constraintTop_toTopOf="@+id/imageGame"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtgame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Play Game"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageGame"
+                app:layout_constraintEnd_toEndOf="@+id/imggameicon"
+                app:layout_constraintStart_toStartOf="@+id/imggameicon"
+                app:layout_constraintTop_toBottomOf="@+id/imggameicon" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/download"
+                app:layout_constraintBottom_toBottomOf="@id/imageGame"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageGame"
+                app:layout_constraintTop_toTopOf="@+id/imageGame" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imgdownloadicon"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/downloadicon"
+                app:layout_constraintBottom_toTopOf="@id/txtdownload"
+                app:layout_constraintEnd_toEndOf="@+id/imageDownload"
+                app:layout_constraintStart_toStartOf="@+id/imageDownload"
+                app:layout_constraintTop_toTopOf="@+id/imageDownload"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtdownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Downloads"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageDownload"
+                app:layout_constraintEnd_toEndOf="@+id/imgdownloadicon"
+                app:layout_constraintStart_toStartOf="@+id/imgdownloadicon"
+                app:layout_constraintTop_toBottomOf="@+id/imgdownloadicon" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/youtubeDownload"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tubebg"
+                app:layout_constraintBottom_toTopOf="@id/nativeads"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageGame" />
+
+            <LinearLayout
+                android:id="@+id/nativeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtFolder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/youtubeDownload" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/txtTube"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_70sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/txttube"
+                app:layout_constraintBottom_toBottomOf="@id/youtubeDownload"
+                app:layout_constraintEnd_toEndOf="@id/youtubeDownload"
+                app:layout_constraintStart_toEndOf="@id/lotti"
+                app:layout_constraintTop_toTopOf="@id/youtubeDownload" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lotti"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_140sdp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="@id/youtubeDownload"
+                app:layout_constraintEnd_toStartOf="@id/txtTube"
+                app:layout_constraintStart_toStartOf="@id/youtubeDownload"
+                app:layout_constraintTop_toTopOf="@id/youtubeDownload"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/tubedownload"
+                app:lottie_speed="1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Folders"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintBottom_toTopOf="@id/imgRecentAdded"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nativeads" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imgRecentAdded"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/playlist"
+                app:layout_constraintBottom_toTopOf="@+id/rcView"
+                app:layout_constraintEnd_toStartOf="@id/txtRecentAdded"
+                app:layout_constraintStart_toStartOf="@+id/txtFolder"
+                app:layout_constraintTop_toBottomOf="@+id/txtFolder" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtRecentAdded"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="Recent Added"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgRecentAdded"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgRecentAdded"
+                app:layout_constraintTop_toTopOf="@+id/imgRecentAdded" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgRecentAdded"
+                tools:listitem="@layout/folderitemlist" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="imgRecentAdded,txtRecentAdded" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="textView,imageFilterView3,recentPlayedRV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#9A9A9A"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Home"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/home"
+                app:layout_constraintBottom_toTopOf="@id/txtHome"
+                app:layout_constraintEnd_toStartOf="@id/Site"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtHome"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Home"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Home"
+                app:layout_constraintStart_toStartOf="@+id/Home"
+                app:layout_constraintTop_toBottomOf="@+id/Home" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Site"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/site"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@+id/Home"
+                app:layout_constraintEnd_toStartOf="@id/Photos"
+                app:layout_constraintStart_toEndOf="@+id/Home"
+                app:layout_constraintTop_toTopOf="@+id/Home" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSite"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Site"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtHome"
+                app:layout_constraintEnd_toEndOf="@+id/Site"
+                app:layout_constraintStart_toStartOf="@+id/Site"
+                app:layout_constraintTop_toTopOf="@+id/txtHome" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Photos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/photos"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@id/Site"
+                app:layout_constraintEnd_toStartOf="@id/Videos"
+                app:layout_constraintStart_toEndOf="@+id/Site"
+                app:layout_constraintTop_toTopOf="@+id/Site" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPhotos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Photos"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtHome"
+                app:layout_constraintEnd_toEndOf="@+id/Photos"
+                app:layout_constraintStart_toStartOf="@+id/Photos"
+                app:layout_constraintTop_toTopOf="@+id/txtHome" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Videos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/videos"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@id/Photos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Photos"
+                app:layout_constraintTop_toTopOf="@+id/Photos" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtVideos"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Videos"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtHome"
+                app:layout_constraintEnd_toEndOf="@+id/Videos"
+                app:layout_constraintStart_toStartOf="@+id/Videos"
+                app:layout_constraintTop_toTopOf="@+id/txtHome" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Site,txtSite" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupPhotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Photos,txtPhotos" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupVideos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Videos,txtVideos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

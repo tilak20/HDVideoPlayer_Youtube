@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/download_item_bg"
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imgDownload"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:round="@dimen/_14sdp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/imgDownload"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="start"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/imgDownload"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="start"
+            android:text="Time"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTime"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/imgDownload"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="start"
+            android:text="Size"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/btnDelete"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignTop="@id/btnShare"
+            android:layout_alignBottom="@id/btnShare"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@id/btnShare"
+            android:src="@drawable/delete_icon" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/btnShare"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/share_icon" />
+    </RelativeLayout>
+</LinearLayout>

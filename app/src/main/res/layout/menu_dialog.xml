@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheet_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/refresh"
+        app:layout_constraintBottom_toTopOf="@id/imgRate"
+        app:layout_constraintEnd_toStartOf="@id/txtPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtPlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Refresh"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPlay"
+        app:layout_constraintTop_toTopOf="@+id/imgPlay" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgRate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rateus"
+        app:layout_constraintBottom_toTopOf="@id/imgRate"
+        app:layout_constraintEnd_toEndOf="@id/imgPlay"
+        app:layout_constraintStart_toStartOf="@+id/imgPlay"
+        app:layout_constraintTop_toBottomOf="@id/imgPlay" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtRate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Rate Us"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRate"
+        app:layout_constraintEnd_toEndOf="@+id/txtPlay"
+        app:layout_constraintStart_toStartOf="@+id/txtPlay"
+        app:layout_constraintTop_toTopOf="@+id/imgRate" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgShare"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/share_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgRate"
+        app:layout_constraintStart_toStartOf="@id/imgRate"
+        app:layout_constraintTop_toBottomOf="@id/imgRate" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShare"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Share"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtRate"
+        app:layout_constraintTop_toTopOf="@id/imgShare" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgPlay,txtPlay" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgRate,txtRate" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgShare,txtShare" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

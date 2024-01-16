@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:background="@drawable/corner_bg"
+    android:padding="@dimen/_10sdp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageVideo"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtlink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round="@dimen/_10sdp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtlink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Download Complete"
+        android:textColor="@color/app_blue_dark"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/txtlinkSingle"
+        app:layout_constraintEnd_toStartOf="@id/imgplay"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@id/imageVideo"
+        app:layout_constraintTop_toTopOf="@id/imageVideo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtlinkSingle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="File Name"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgplay"
+        app:layout_constraintStart_toEndOf="@id/imageVideo"
+        app:layout_constraintTop_toBottomOf="@id/txtlink" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgplay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/play_icon"
+        app:layout_constraintBottom_toBottomOf="@id/imageVideo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtlink"
+        app:layout_constraintTop_toTopOf="@id/imageVideo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

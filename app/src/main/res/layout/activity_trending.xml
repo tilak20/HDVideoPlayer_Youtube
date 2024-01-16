@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TrendingActivity">
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgback"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toTopOf="@id/Scrollview"
+        app:layout_constraintEnd_toStartOf="@id/appname"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/appname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Video Player"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imgback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/imgback"
+        app:layout_constraintTop_toTopOf="@id/imgback" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/LL1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/imgback">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/nativeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/trendingRv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trendingRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nativeads"
+                tools:listitem="@layout/youtube_video_item" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nativeads" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#9A9A9A"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Trending"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/trending"
+                app:layout_constraintBottom_toTopOf="@id/txtTrending"
+                app:layout_constraintEnd_toStartOf="@id/Search"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTrending"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Trending"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Trending"
+                app:layout_constraintStart_toStartOf="@+id/Trending"
+                app:layout_constraintTop_toBottomOf="@+id/Trending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/search"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@+id/Trending"
+                app:layout_constraintEnd_toStartOf="@id/Progress"
+                app:layout_constraintStart_toEndOf="@+id/Trending"
+                app:layout_constraintTop_toTopOf="@+id/Trending" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Search"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Search"
+                app:layout_constraintStart_toStartOf="@+id/Search"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/progress"
+                app:layout_constraintBottom_toBottomOf="@id/Search"
+                app:layout_constraintEnd_toStartOf="@id/Storage"
+                app:layout_constraintStart_toEndOf="@+id/Search"
+                app:layout_constraintTop_toTopOf="@+id/Search" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtProgress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloading"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Progress"
+                app:layout_constraintStart_toStartOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Storage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/storage"
+                app:layout_constraintBottom_toBottomOf="@id/Progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/Progress" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtStorage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloaded"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Storage"
+                app:layout_constraintStart_toStartOf="@+id/Storage"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Progress,txtProgress" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Search,txtSearch" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Storage,txtStorage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

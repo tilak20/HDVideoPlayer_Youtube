@@ -1,0 +1,69 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HDVideoPlayer_Youtube" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.HDVideoPlayer_Youtube" parent="Base.Theme.HDVideoPlayer_Youtube" />
+
+
+
+    <style name="BottomsheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetdialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomsheetStyle</item>
+    </style>
+
+
+    <style name="MyPopupMenu" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_item_background</item>
+        <item name="android:dropDownHorizontalOffset">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:dropDownVerticalOffset">6dp</item>
+    </style>
+
+    <!-- =============================================================================================================== -->
+
+    <style name="bs_image_style">
+        <item name="android:layout_gravity">clip_horizontal</item>
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_weight">@null</item>
+    </style>
+    <style name="bs_textview_style">
+        <item name="android:textSize">@dimen/_16sdp</item>
+        <item name="android:gravity">clip_horizontal</item>
+        <item name="android:layout_gravity">clip_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">@null</item>
+        <item name="android:paddingStart">@dimen/_24sdp</item>
+    </style>
+
+    <style name="bs_linearlayout_holder_style">
+        <item name="android:orientation">@null</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingStart">@dimen/_24sdp</item>
+    </style>
+
+
+    <style name="bs_devider_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/text_red</item>
+
+    </style>
+</resources>

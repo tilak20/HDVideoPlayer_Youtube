@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Search_Activity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgback"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_medium"
+        android:hint="Search here..."
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColorHint="#9C9C9C"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/Scrollview"
+        app:layout_constraintEnd_toStartOf="@+id/btnsearch"
+        app:layout_constraintStart_toEndOf="@+id/imgback"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnsearch"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtSearch" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/LL1"
+        app:layout_constraintTop_toBottomOf="@id/edtSearch">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtnews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Today News"
+                android:textColor="@color/tag_text"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtlovesong"
+                app:layout_constraintEnd_toStartOf="@id/txtnature"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtlovesong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Love Songs"
+                android:textColor="@color/tag_text"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtdance"
+                app:layout_constraintEnd_toEndOf="@+id/txtnews"
+                app:layout_constraintHorizontal_bias="0.714"
+                app:layout_constraintStart_toStartOf="@+id/txtnews"
+                app:layout_constraintTop_toBottomOf="@+id/txtnews" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtdance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Sexy Dance"
+                android:textColor="@color/tag_text"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toTopOf="@id/txtdeepwork"
+                app:layout_constraintEnd_toEndOf="@+id/txtlovesong"
+                app:layout_constraintStart_toStartOf="@+id/txtlovesong"
+                app:layout_constraintTop_toBottomOf="@+id/txtlovesong" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtdeepwork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Deep Work"
+                android:textColor="@color/tag_text"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toTopOf="@id/nativeads"
+                app:layout_constraintEnd_toEndOf="@+id/txtdance"
+                app:layout_constraintStart_toStartOf="@+id/txtdance"
+                app:layout_constraintTop_toBottomOf="@+id/txtdance" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtnature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Nature"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtnews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtnews"
+                app:layout_constraintTop_toTopOf="@+id/txtnews" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txttiktok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Hot TikTok"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtlovesong"
+                app:layout_constraintEnd_toEndOf="@+id/txtnature"
+                app:layout_constraintStart_toStartOf="@+id/txtnature"
+                app:layout_constraintTop_toTopOf="@+id/txtlovesong" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtrelax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Relaxing"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtdance"
+                app:layout_constraintEnd_toEndOf="@+id/txttiktok"
+                app:layout_constraintStart_toStartOf="@+id/txttiktok"
+                app:layout_constraintTop_toTopOf="@+id/txtdance" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtchill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Chill"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtdeepwork"
+                app:layout_constraintEnd_toEndOf="@+id/txtrelax"
+                app:layout_constraintStart_toStartOf="@+id/txtrelax"
+                app:layout_constraintTop_toTopOf="@+id/txtdeepwork" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/nativeads"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/trending_item" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/nativeads"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/nativeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="txtnews,txtlovesong,txtdance,txtdeepwork,txtnature,txttiktok,txtrelax,txtchill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/suggestionRv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/LL1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+        tools:listitem="@layout/suggestion_item" />
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#9A9A9A"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Trending"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/trending1"
+                app:layout_constraintBottom_toTopOf="@id/txtTrending"
+                app:layout_constraintEnd_toStartOf="@id/Search"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTrending"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Trending"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Trending"
+                app:layout_constraintStart_toStartOf="@+id/Trending"
+                app:layout_constraintTop_toBottomOf="@+id/Trending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/search1"
+                app:layout_constraintBottom_toBottomOf="@+id/Trending"
+                app:layout_constraintEnd_toStartOf="@id/Progress"
+                app:layout_constraintStart_toEndOf="@+id/Trending"
+                app:layout_constraintTop_toTopOf="@+id/Trending" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Search"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Search"
+                app:layout_constraintStart_toStartOf="@+id/Search"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/progress"
+                app:layout_constraintBottom_toBottomOf="@id/Search"
+                app:layout_constraintEnd_toStartOf="@id/Storage"
+                app:layout_constraintStart_toEndOf="@+id/Search"
+                app:layout_constraintTop_toTopOf="@+id/Search" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtProgress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloading"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Progress"
+                app:layout_constraintStart_toStartOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Storage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/storage"
+                app:layout_constraintBottom_toBottomOf="@id/Progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/Progress" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtStorage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloaded"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtTrending"
+                app:layout_constraintEnd_toEndOf="@+id/Storage"
+                app:layout_constraintStart_toStartOf="@+id/Storage"
+                app:layout_constraintTop_toTopOf="@+id/txtTrending" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Progress,txtProgress" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupTrending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Trending,txtTrending" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Storage,txtStorage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

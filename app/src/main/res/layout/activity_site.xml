@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SiteActivity">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgback"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toTopOf="@id/Scrollview"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/LL1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/imgback">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Search Videos"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@id/textInputEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="How to Use"
+                android:textColor="#A5A5A5"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txtSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtSearch" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/shadow_login"
+                android:drawableStart="@drawable/searchdrawable"
+                android:drawableEnd="@drawable/closedrawable"
+                android:drawablePadding="@dimen/_10sdp"
+                android:elevation="2dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toTopOf="@id/imgInstaReels"
+                app:layout_constraintEnd_toStartOf="@id/imgPaste"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtSearch" />
+
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imgPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/pastelink"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textInputEditText"
+                app:layout_constraintTop_toTopOf="@+id/textInputEditText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/imgInstaReels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/instareel_bg"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_15sdp"
+                android:text="Download Insta Reels"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@id/materialTextView3"
+                app:layout_constraintEnd_toEndOf="@+id/imgPaste"
+                app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+                app:layout_constraintTop_toBottomOf="@id/textInputEditText" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/instareels"
+                app:layout_constraintBottom_toBottomOf="@id/imgInstaReels"
+                app:layout_constraintEnd_toEndOf="@+id/imgInstaReels"
+                app:layout_constraintTop_toTopOf="@+id/imgInstaReels" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Recommended Links"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@id/insta_bg"
+                app:layout_constraintStart_toStartOf="@+id/imgInstaReels"
+                app:layout_constraintTop_toBottomOf="@+id/imgInstaReels" />
+
+
+            <!--            <androidx.constraintlayout.utils.widget.ImageFilterView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="@dimen/_25sdp"-->
+            <!--                android:adjustViewBounds="true"-->
+            <!--                android:layout_marginEnd="@dimen/_10sdp"-->
+            <!--                android:src="@drawable/instareels"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/imgInstaReels"-->
+            <!--                app:layout_constraintEnd_toEndOf="@+id/imgInstaReels"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/imgInstaReels" />-->
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/insta_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/insta_bg"
+                app:layout_constraintBottom_toTopOf="@id/materialTextView4"
+                app:layout_constraintEnd_toStartOf="@+id/facebook_bg"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView3" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/instagram"
+                app:layout_constraintBottom_toBottomOf="@+id/insta_bg"
+                app:layout_constraintEnd_toEndOf="@+id/insta_bg"
+                app:layout_constraintStart_toStartOf="@+id/insta_bg"
+                app:layout_constraintTop_toTopOf="@+id/insta_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Instagram"
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/whatsapp_bg"
+                app:layout_constraintStart_toStartOf="@+id/insta_bg"
+                app:layout_constraintTop_toBottomOf="@id/insta_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/facebook_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/facebook_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/insta_bg"
+                app:layout_constraintEnd_toStartOf="@+id/twitter_bg"
+                app:layout_constraintStart_toEndOf="@+id/insta_bg"
+                app:layout_constraintTop_toTopOf="@+id/insta_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/facebook"
+                app:layout_constraintBottom_toBottomOf="@+id/facebook_bg"
+                app:layout_constraintEnd_toEndOf="@+id/facebook_bg"
+                app:layout_constraintStart_toStartOf="@+id/facebook_bg"
+                app:layout_constraintTop_toTopOf="@+id/facebook_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Facebook"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView4"
+                app:layout_constraintEnd_toEndOf="@+id/facebook_bg"
+                app:layout_constraintStart_toStartOf="@+id/facebook_bg"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView4" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/twitter_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/twitter_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/facebook_bg"
+                app:layout_constraintEnd_toStartOf="@+id/tiktok_bg"
+
+                app:layout_constraintStart_toEndOf="@+id/facebook_bg"
+                app:layout_constraintTop_toTopOf="@+id/facebook_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView6"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/twitter"
+                app:layout_constraintBottom_toBottomOf="@+id/twitter_bg"
+                app:layout_constraintEnd_toEndOf="@+id/twitter_bg"
+                app:layout_constraintStart_toStartOf="@+id/twitter_bg"
+                app:layout_constraintTop_toTopOf="@+id/twitter_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Twitter"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView4"
+                app:layout_constraintEnd_toEndOf="@+id/twitter_bg"
+                app:layout_constraintStart_toStartOf="@+id/twitter_bg"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView4" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/tiktok_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tiktok_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/twitter_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/twitter_bg"
+                app:layout_constraintTop_toTopOf="@+id/twitter_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView7"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/tiktok"
+                app:layout_constraintBottom_toBottomOf="@+id/tiktok_bg"
+                app:layout_constraintEnd_toEndOf="@+id/tiktok_bg"
+                app:layout_constraintStart_toStartOf="@+id/tiktok_bg"
+                app:layout_constraintTop_toTopOf="@+id/tiktok_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Tik Tok"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView4"
+                app:layout_constraintEnd_toEndOf="@+id/tiktok_bg"
+                app:layout_constraintStart_toStartOf="@+id/tiktok_bg"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView4" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/whatsapp_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/whatsapp_bg"
+                app:layout_constraintBottom_toTopOf="@id/materialTextView8"
+                app:layout_constraintEnd_toEndOf="@+id/insta_bg"
+                app:layout_constraintStart_toStartOf="@+id/insta_bg"
+                app:layout_constraintTop_toBottomOf="@id/materialTextView4" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView8"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/whatsapp"
+                app:layout_constraintBottom_toBottomOf="@+id/whatsapp_bg"
+                app:layout_constraintEnd_toEndOf="@+id/whatsapp_bg"
+                app:layout_constraintStart_toStartOf="@+id/whatsapp_bg"
+                app:layout_constraintTop_toTopOf="@+id/whatsapp_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="WhatsApp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/nativeads"
+                app:layout_constraintStart_toStartOf="@+id/whatsapp_bg"
+                app:layout_constraintTop_toBottomOf="@id/whatsapp_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/vimeo_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/vimeo_bg"
+                app:layout_constraintBottom_toBottomOf="@id/whatsapp_bg"
+                app:layout_constraintEnd_toEndOf="@+id/facebook_bg"
+                app:layout_constraintStart_toStartOf="@+id/facebook_bg"
+                app:layout_constraintTop_toTopOf="@id/whatsapp_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView9"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/vimeo"
+                app:layout_constraintBottom_toBottomOf="@+id/vimeo_bg"
+                app:layout_constraintEnd_toEndOf="@+id/vimeo_bg"
+                app:layout_constraintStart_toStartOf="@+id/vimeo_bg"
+                app:layout_constraintTop_toTopOf="@+id/vimeo_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Vimeo"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView8"
+                app:layout_constraintEnd_toEndOf="@+id/vimeo_bg"
+                app:layout_constraintStart_toStartOf="@+id/vimeo_bg"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView8" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/dailymotion_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dailymotion_bg"
+                app:layout_constraintBottom_toBottomOf="@id/vimeo_bg"
+
+                app:layout_constraintEnd_toEndOf="@+id/twitter_bg"
+                app:layout_constraintStart_toStartOf="@+id/twitter_bg"
+                app:layout_constraintTop_toBottomOf="@id/materialTextView4"
+                app:layout_constraintTop_toTopOf="@id/vimeo_bg" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/daily_motion"
+                app:layout_constraintBottom_toBottomOf="@+id/dailymotion_bg"
+                app:layout_constraintEnd_toEndOf="@+id/dailymotion_bg"
+                app:layout_constraintStart_toStartOf="@+id/dailymotion_bg"
+                app:layout_constraintTop_toTopOf="@+id/dailymotion_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Dailymotion"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView8"
+                app:layout_constraintEnd_toEndOf="@+id/dailymotion_bg"
+                app:layout_constraintStart_toStartOf="@+id/dailymotion_bg"
+                app:layout_constraintTop_toTopOf="@+id/materialTextView8" />
+
+            <LinearLayout
+                android:id="@+id/nativeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/materialTextView12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialTextView8" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Bookmarks"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/google_bg"
+                app:layout_constraintStart_toStartOf="@+id/imgInstaReels"
+                app:layout_constraintTop_toBottomOf="@+id/nativeads" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/google_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/google_bg"
+                app:layout_constraintEnd_toEndOf="@+id/whatsapp_bg"
+                app:layout_constraintStart_toStartOf="@+id/whatsapp_bg"
+                app:layout_constraintTop_toBottomOf="@id/materialTextView12" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imageFilterView12"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/google"
+                app:layout_constraintBottom_toBottomOf="@+id/google_bg"
+                app:layout_constraintEnd_toEndOf="@+id/google_bg"
+                app:layout_constraintStart_toStartOf="@+id/google_bg"
+                app:layout_constraintTop_toTopOf="@+id/google_bg" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Google"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/google_bg"
+                app:layout_constraintStart_toStartOf="@+id/google_bg"
+                app:layout_constraintTop_toBottomOf="@id/google_bg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#9A9A9A"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@id/guideline1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Site"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/site"
+                app:layout_constraintBottom_toTopOf="@id/txtSite"
+                app:layout_constraintEnd_toStartOf="@id/Browser"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtSite"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Site"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Site"
+                app:layout_constraintStart_toStartOf="@+id/Site"
+                app:layout_constraintTop_toBottomOf="@+id/Site" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Browser"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/browser"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@+id/Site"
+                app:layout_constraintEnd_toStartOf="@id/Progress"
+                app:layout_constraintStart_toEndOf="@+id/Site"
+                app:layout_constraintTop_toTopOf="@+id/Site" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtBrowser"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Browser"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtSite"
+                app:layout_constraintEnd_toEndOf="@+id/Browser"
+                app:layout_constraintStart_toStartOf="@+id/Browser"
+                app:layout_constraintTop_toTopOf="@+id/txtSite" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Progress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/progress"
+                app:layout_constraintBottom_toBottomOf="@id/Browser"
+                app:layout_constraintEnd_toStartOf="@id/Storage"
+                app:layout_constraintStart_toEndOf="@+id/Browser"
+                app:layout_constraintTop_toTopOf="@+id/Browser" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtProgress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloading"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtSite"
+                app:layout_constraintEnd_toEndOf="@+id/Progress"
+                app:layout_constraintStart_toStartOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/txtSite" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/Storage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/storage"
+                android:tint="#AEAEAE"
+                app:layout_constraintBottom_toBottomOf="@id/Progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Progress"
+                app:layout_constraintTop_toTopOf="@+id/Progress" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtStorage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Downloaded"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@id/txtSite"
+                app:layout_constraintEnd_toEndOf="@+id/Storage"
+                app:layout_constraintStart_toStartOf="@+id/Storage"
+                app:layout_constraintTop_toTopOf="@+id/txtSite" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Progress,txtProgress" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupBrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Browser,txtBrowser" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupStorage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="Storage,txtStorage" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

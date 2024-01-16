@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheet_bg"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtWDW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="What do you want!"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@id/imgEdit"
+        app:layout_constraintEnd_toStartOf="@id/txtPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWDW"
+        app:tint="@android:color/black" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtPlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Play Video"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPlay"
+        app:layout_constraintTop_toTopOf="@+id/imgPlay" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_rename"
+        app:layout_constraintBottom_toTopOf="@id/imgShare"
+        app:layout_constraintEnd_toEndOf="@id/imgPlay"
+        app:layout_constraintStart_toStartOf="@+id/imgPlay"
+        app:layout_constraintTop_toBottomOf="@id/imgPlay"
+        app:tint="@android:color/black" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Rename"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEdit"
+        app:layout_constraintEnd_toEndOf="@+id/txtPlay"
+        app:layout_constraintStart_toStartOf="@+id/txtPlay"
+        app:layout_constraintTop_toTopOf="@+id/imgEdit" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toTopOf="@id/imgDelete"
+        app:layout_constraintEnd_toEndOf="@id/imgEdit"
+        app:layout_constraintStart_toStartOf="@id/imgEdit"
+        app:layout_constraintTop_toBottomOf="@id/imgEdit"
+        app:tint="@android:color/black" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtShare"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Share"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtEdit"
+        app:layout_constraintTop_toTopOf="@id/imgShare" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toTopOf="@id/imgProp"
+        app:layout_constraintEnd_toEndOf="@id/imgShare"
+        app:layout_constraintStart_toStartOf="@id/imgShare"
+        app:layout_constraintTop_toBottomOf="@id/imgShare"
+        app:tint="@android:color/black" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtDelete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Delete"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtShare"
+        app:layout_constraintTop_toTopOf="@id/imgDelete" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgProp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@drawable/ic_properties"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgDelete"
+        app:layout_constraintStart_toStartOf="@id/imgDelete"
+        app:layout_constraintTop_toBottomOf="@id/imgDelete"
+        app:tint="@android:color/black" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtProp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="Properties"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgProp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtDelete"
+        app:layout_constraintTop_toTopOf="@id/imgProp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgPlay,txtPlay" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_rename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgEdit,txtEdit" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgShare,txtShare" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgDelete,txtDelete" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/bs_properties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imgProp,txtProp" />
+
+    <!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
